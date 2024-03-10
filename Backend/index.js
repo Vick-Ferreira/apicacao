@@ -1,16 +1,11 @@
-// Importando os pacotes necessários
 const express = require('express');
-
-// Inicializando o servidor Express
 const app = express();
+const port = process.env.PORT || 3000;
 
-// Definindo uma rota de exemplo
 app.get('/', (req, res) => {
-    res.send('Backend rodando na porta 3000');
+    res.send('Seu aplicativo está rodando corretamente no Heroku!');
 });
 
-// Iniciando o servidor na porta 3000
-const port = 3000;
 app.listen(port, () => {
-    console.log(`Servidor backend rodando na porta ${port}`);
+    console.log(`Servidor rodando na porta ${port}`);
 });
